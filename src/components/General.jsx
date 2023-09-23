@@ -20,11 +20,11 @@ class General extends Component {
           <div id="general-contact">
             <div>
               <label>Phone Number: </label>
-              <input type="text" value={this.state.phone} readOnly="true" />
+              <input type="text" value={this.state.phone} readOnly={true} />
             </div>
             <div>
               <label>Email: </label>
-              <input type="text" value={this.state.email} readOnly="true" />
+              <input type="text" value={this.state.email} readOnly={true} />
             </div>
           </div>
         </form>
