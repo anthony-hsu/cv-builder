@@ -4,16 +4,28 @@ import "./styles/App.css";
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
-      editMode: false,
-    };
+       editMode: false,
+    }
+
+    this.setEditMode = this.setEditMode.bind();
   }
 
   btnEditClick = () => {
-    console.log(this);
-  };
+    this.setEditMode(true);
+  }
+
+  btnSubmitClick = () => {
+    this.setEditMode(false);
+  }
+
+  setEditMode = (editable) => {
+    this.setState({
+      editMode: editable,
+    })
+  }
 
   render() {
     return (
@@ -21,9 +33,11 @@ class App extends Component {
         <div className="form-container">
           <div className="buttons-container">
             <button onClick={() => this.btnEditClick()}>Edit</button>
-            <button>Submit</button>
+            <button onClick={() => this.btnSubmitClick()}>Submit</button>
           </div>
-          <CVForm className="cv-contents" />
+          <CVForm 
+            className="cv-contents" 
+            editMode={this.state.editMode}/>
         </div>
       </div>
     );

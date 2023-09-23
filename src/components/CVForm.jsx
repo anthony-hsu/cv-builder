@@ -11,13 +11,14 @@ class CVForm extends Component {
     };
   }
   render() {
+    const {className, editMode} = this.props;
     return (
-      <div className={this.props.className}>
-        <General />
-        <Experience />
-        <Education />
+      <div className={className}>
+        <General editMode={editMode} />
+        <Experience editMode={editMode} />
+        <Education editMode={editMode} />
       </div>
-    );
+    )
   }
 }
 
