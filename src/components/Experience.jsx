@@ -29,7 +29,7 @@ class Experience extends Component {
         <form>
           <h3>Experience</h3>
           {this.state.experienceItems.map((item) => {
-            return <ExperienceItem id={item.id} editMode={editMode} />;
+            return <ExperienceItem key={item.id} editMode={editMode} />;
           })}
         </form>
         {!editMode ? (

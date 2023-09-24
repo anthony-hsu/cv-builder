@@ -3,11 +3,11 @@ import { Component } from "react";
 class General extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       name: "Anthony Hsu",
-      phone: "(281) 935-6783",
-      email: "anthhsu@gmail.com",
+      phone: "(123) 456-7890",
+      email: "user@github.com",
     };
   }
 
